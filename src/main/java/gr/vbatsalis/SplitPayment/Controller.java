@@ -2,13 +2,10 @@ package gr.vbatsalis.SplitPayment;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("/api")
 public class Controller {
 
     private User user;
@@ -19,11 +16,16 @@ public class Controller {
         this.userSevice = userSevice;
     }
 
-    @GetMapping("/get/{userName}")
-    public ResponseEntity<User> getUser(@PathVariable String userName){
-        User user = userSevice.
-
-        if()
+    @GetMapping("/get/{id}")
+    public User getUser(@PathVariable int id){
+        return userSevice.getUserById(id);
     }
+
+    @PostMapping("/new")
+    public void saveUser(@RequestBody User user){
+        userSevice.saveUser(user);
+    }
+
+
 
 }

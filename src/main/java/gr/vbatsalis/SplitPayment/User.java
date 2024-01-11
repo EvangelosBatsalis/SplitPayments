@@ -21,16 +21,19 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID", nullable = false)
-    @JsonIgnore
+//    @JsonIgnore
     private int id;
     @Column(name="USER_NAME")
     private String userName;
-    @Column(name="DESCRIPTION")
-    private String description;
-    @Column(name="DATE")
-    private LocalDate localDate;
-    @Column(name="AMOUNT")
-    private BigDecimal amount;
+    @Column(name="EMAIL")
+    private String email;
+//    @Column(name="DESCRIPTION")
+//    private String description;
+//    @Column(name="DATE")
+//    private LocalDate localDate;
+//    @Column(name="AMOUNT")
+//    private BigDecimal amount;
+
 
 
 

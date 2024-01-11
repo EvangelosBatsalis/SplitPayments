@@ -2,6 +2,7 @@ package gr.vbatsalis.SplitPayment;
 
 import jakarta.websocket.server.ServerEndpoint;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,14 +15,12 @@ public class UserSevice {
         this.userRepository = userRepository;
     }
 
-    public void userFind(User user){
-        userRepository.findUserByUserName();
-    }
+        public User getUserById(int id){
+        return userRepository.findUserById(id);
+        }
 
-    public void userSave(User user){
-        userRepository.save(user);
-    }
-    public void userSaveToList(User user){
-        userRepository.addToList(user);
-    }
+        public void saveUser(User user){
+            userRepository.save(user);
+        }
+
 }
