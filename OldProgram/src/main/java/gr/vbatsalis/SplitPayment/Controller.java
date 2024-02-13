@@ -26,13 +26,10 @@ public class Controller {
     public String getUserById(@PathVariable int id, Model model){
         User user = userSevice.getUserById(id);
         model.addAttribute("user", user);
-        return dataView;
+        return "dataView";
     }
     @PostMapping("/new")
     public void saveUser(@RequestBody User user){
         userSevice.saveUser(user);
     }
-
-
-
 }
