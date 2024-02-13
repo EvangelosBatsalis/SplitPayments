@@ -7,8 +7,10 @@ import java.util.List;
 @Repository
 public class PersonService {
 
-    private List<Person> personList;
+    private Person person;
 
-    public void savePerson()
+    public void addPayment(Payment payment){
+        person.setPaymentList((List<Payment>) payment);
+    }
 
 }

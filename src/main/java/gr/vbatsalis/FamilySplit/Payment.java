@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payments {
+public class Payment {
     private String description;
     private BigInteger value;
     private LocalDate localDate;

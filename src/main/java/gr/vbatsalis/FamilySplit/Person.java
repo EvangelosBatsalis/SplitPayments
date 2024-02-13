@@ -12,7 +12,7 @@ import java.util.List;
 public class Person {
 
     //one to many relation
-    private List<Payments> paymentsList;
+    private List<Payment> paymentList;
 
     private String firstName;
     private String lastName;
